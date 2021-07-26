@@ -15,6 +15,8 @@
 /* Variables */
 :root {
   --vine-width: 20px;
+  --filterEffectRed: invert(17%) sepia(64%) saturate(7484%) hue-rotate(357deg)
+    brightness(115%) contrast(118%);
 }
 
 * {
@@ -268,18 +270,175 @@ em {
 
 .section-projects h2 {
   grid-column: 2;
-  font-size: 350%;
-  font-family: "Tourney", cursive;
-  font-weight: 300;
-  margin: 10px 5px;
 }
-  border: 3px solid white;
+
+.left-side {
+  place-self: center end;
+  grid-column-start: 1;
+}
+
+.right-side {
+  place-self: center start;
+  grid-column-start: 3;
+}
+
+.project-photo-container {
+  margin: 10px 5px;
+  position: relative;
+  height: 350px;
+  width: fit-content;
+  transition-duration: 0.5s;
+}
+
+.project-photo {
+  height: 100%;
+  border-radius: 50%;
   border-radius: 10px;
+  border: 3px solid white;
+  transition-duration: 0.5s;
+}
+
+.project-photo-container:hover {
+  height: 400px;
+  transition-duration: 0.5s;
+}
+
+.project-photo-container:hover::after {
+  /* Text */
+  content: "Visit Site";
+  color: white;
+  text-align: center;
+  /* Position & Size */
+  position: absolute;
+  width: 98%;
+  margin: 0% 1%;
+  top: 90%;
+  z-index: 5;
+  /* Style */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.project-photo-container:hover .project-photo {
+  border: 3px solid green;
+  transition-duration: 0.5s;
+}
+
+.project-github-link {
+  /* Position & Size */
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  /* Style */
+  padding: 5px;
+}
+
+.project-github-link-icon {
+  height: 50px;
+  width: 50px;
+}
+
+.project-github-link-icon:hover {
+  filter: var(--filterEffectRed);
+}
+
+.project-github-link:hover::after {
+  content: "Repo";
+  color: white;
+  text-align: center;
+  /* Position & Size */
+  width: fit-content;
+  position: absolute;
+  z-index: 5;
+  left: 95%;
+  top: 30%;
+  /* Style */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Project Description */
+.project-description-container {
+  max-width: 550px;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.4),
     rgba(0, 0, 0, 0.4)
   );
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  padding: 2px 0px;
+}
+
+.project-description {
+  padding: 5px 2px;
+}
+
+/* Left-Side Text */
+.left-side .project-title {
+  text-align: right;
+}
+
+.left-side .project-description {
+  text-align: right;
+}
+
+/* Progress & Skills */
+.project-progress-and-skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Skills */
+.project-skills {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.project-skills .skill-icon {
+  height: 50px;
+  padding: 0px 2px;
+  margin: 0px;
+}
+
+/* Progress Bar */
+.project-progress {
+  width: 60%;
+  padding-bottom: 2px;
+}
+
+.progress-bar-container {
+  /* Size and Position */
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  /* Styling */
+  border: 1px white solid;
+  border-radius: 5px;
+  background-color: rgba(70, 129, 70, 0.514);
+}
+
+.progress-bar-total {
+  background-color: rgb(45, 201, 45);
+  width: calc(var(--progress) * 1%);
+  height: 80%;
+}
+
+.progress-bar-text-left {
+  position: absolute;
+  left: 2px;
+}
+
+.progress-bar-text-right {
+  position: absolute;
+  right: 2px;
 }
 
 /* Vines */
