@@ -248,6 +248,26 @@ em {
   transition-duration: 1.5s;
 }
 
+/* ==============
+   ===PROJECTS===
+   ============== */
+
+.section-projects {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: repeat(4, auto);
+  margin-top: 20px;
+  justify-items: center;
+  width: 100%;
+}
+
+.section-projects h2 {
+  grid-column: 2;
+  font-size: 350%;
+  font-family: "Tourney", cursive;
+  font-weight: 300;
+  margin: 10px 5px;
+}
   border: 3px solid white;
   border-radius: 10px;
   background-image: linear-gradient(
