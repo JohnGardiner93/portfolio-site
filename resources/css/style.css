@@ -12,6 +12,11 @@
    ===GLOBAL STYLING===
    ==================== */
 
+/* Variables */
+:root {
+  --vine-width: 20px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -277,9 +282,103 @@ em {
   );
 }
 
-/* ==============
-   ===PROJECTS===
-   ============== */
+/* Vines */
+.project-vine {
+  display: grid;
+  align-items: stretch;
+  grid-template-rows: auto min-content min-content auto;
+  grid-template-columns: 1fr 20px 1fr;
+  grid-template-areas:
+    ". vine-top ."
+    "vine-left vine-open-left ."
+    ". vine-open-right vine-right"
+    ". vine-bottom .";
+  align-self: stretch;
+  justify-self: stretch;
+  grid-column-start: 2;
+}
+
+.project-vine .vine {
+  background-color: rgb(93, 190, 93);
+  border-color: white;
+  border-width: 2px;
+}
+
+.vine-center {
+  width: var(--vine-width);
+  height: 100%;
+}
+
+.vine-branch {
+  width: 50px;
+  height: var(--vine-width);
+  border-bottom: solid;
+  border-top: solid;
+}
+
+.vine-top {
+  grid-area: vine-top;
+}
+
+.vine-bottom {
+  grid-area: vine-bottom;
+}
+
+.vine-top,
+.vine-bottom {
+  border-right: solid;
+  border-left: solid;
+}
+
+.vine-open-left {
+  grid-area: vine-open-left;
+  border-right: solid;
+  height: var(--vine-width);
+}
+
+.vine-open-right {
+  grid-area: vine-open-right;
+  border-left: solid;
+  height: var(--vine-width);
+}
+
+.vine-wrapper-left {
+  grid-area: vine-left;
+  position: relative;
+}
+
+.vine-left {
+  border-bottom-left-radius: var(--vine-width);
+  border-top-left-radius: var(--vine-width);
+  border-left: solid;
+  margin-left: 2px;
+  width: 100%;
+}
+
+.vine-wrapper-right {
+  grid-area: vine-right;
+}
+
+.vine-right {
+  grid-area: vine-right;
+  border-bottom-right-radius: var(--vine-width);
+  border-top-right-radius: var(--vine-width);
+  margin-left: -2px;
+  width: 100%;
+  border-right: solid;
+}
+
+.vine-end-top {
+  border-top-right-radius: var(--vine-width);
+  border-top-left-radius: var(--vine-width);
+  border-top: solid;
+}
+
+.vine-end-bottom {
+  border-bottom-right-radius: var(--vine-width);
+  border-bottom-left-radius: var(--vine-width);
+  border-bottom: solid;
+}
 
 /* ===============
    ===EDUCATION===
