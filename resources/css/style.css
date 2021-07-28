@@ -28,7 +28,7 @@
 html,
 body {
   /* Font */
-  font-family: "Georgia", "Arial", serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20px;
   color: white;
   /* Background */
@@ -66,9 +66,13 @@ body {
   background-color: white;
 }
 
-section > h2 {
-  font-family: "Tourney", cursive;
-  font-size: 350%;
+h1,
+h2 {
+  font-family: "Oxanium", cursive;
+}
+
+h2 {
+  font-size: 425%;
   font-weight: 300;
   margin: 10px 5px;
 }
@@ -98,13 +102,14 @@ nav {
     rgba(0, 0, 0, 0.8)
   );
   z-index: 100;
+  font-size: 125%;
 }
 
-nav h2 {
+nav h1 {
   grid-area: name;
   place-self: center;
   text-align: center;
-  font-family: "Tourney", cursive;
+  margin-bottom: -10px;
   font-size: 250%;
   font-weight: 300;
 }
@@ -173,8 +178,7 @@ a:visited {
 }
 
 .section-aboutme h2 {
-  font-weight: lighter;
-  font-size: 200%;
+  grid-area: title;
   text-align: center;
 }
 
@@ -206,10 +210,10 @@ a:visited {
   height: fit-content;
 }
 
-.aboutme-container--skill-icons h2 {
+.section-aboutme h3 {
   width: 100%;
+  font-size: 175%;
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .skill-icon {
@@ -276,7 +280,9 @@ em {
 }
 
 .section-projects h2 {
+  padding-bottom: 5px;
   grid-column: 2;
+  height: min-content;
 }
 
 .left-side {
