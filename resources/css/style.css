@@ -135,12 +135,12 @@ nav h1 {
 
 .nav-icon {
   height: 50px;
-  transition-duration: 0.5s;
+  transition-duration: 0.25s;
 }
 
 .nav-icon:hover {
-  height: 65px;
-  transition-duration: 0.5s;
+  height: 55px;
+  transition-duration: 0.25s;
 }
 
 .nav-internal-links {
@@ -170,11 +170,14 @@ a:visited {
 
 .section-aboutme {
   display: grid;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 1fr auto 1fr;
+  grid-template-areas:
+    "title title title"
+    ". . .";
   align-content: center;
   justify-content: center;
-  padding-top: 40px;
+  height: 70vh;
 }
 
 .section-aboutme h2 {
@@ -229,7 +232,7 @@ a:visited {
 }
 
 .aboutme-image {
-  height: 300px;
+  height: 50vh;
   border-radius: 50%;
   border: 5px solid white;
   place-self: center;
@@ -273,8 +276,8 @@ em {
 .section-projects {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: repeat(4, auto);
-  margin-top: 20px;
+  grid-template-rows: auto repeat(3, auto);
+  padding-top: 125px;
   justify-items: center;
   width: 100%;
 }
@@ -301,6 +304,7 @@ em {
   height: 350px;
   width: fit-content;
   transition-duration: 0.5s;
+  margin: 60px 0; /* Allows images to stretch and cause vine stretching and allows there to be healthy separation between the projects */
 }
 
 .project-photo {
