@@ -560,6 +560,26 @@ em {
    ===EDUCATION===
    =============== */
 
+.section-education {
+  margin: 100px 0px;
+  justify-items: center;
+  width: 100%;
+}
+
+.section-education h2 {
+  text-align: center;
+}
+
+.education-icon-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+progress-ring {
+  margin: 0 30px;
+}
 /* ===============
    ===CONTACTME===
    =============== */
