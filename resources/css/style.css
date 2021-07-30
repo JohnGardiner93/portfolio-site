@@ -577,6 +577,11 @@ em {
   padding: 120px 0px;
   justify-items: center;
   width: 100%;
+  min-height: 75vh;
+}
+
+.section-education h2 {
+  margin-bottom: 50px;
 }
 
 .education-icon-container {
