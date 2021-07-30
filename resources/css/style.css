@@ -17,6 +17,10 @@
   --vine-width: 20px;
   --filterEffectRed: invert(17%) sepia(64%) saturate(7484%) hue-rotate(357deg)
     brightness(115%) contrast(118%);
+
+  /* Sizes */
+  --height--nav-icon: 50px;
+  --height--nav-icon-hover: 55px;
 }
 
 * {
@@ -139,12 +143,12 @@ nav h1 {
 }
 
 .nav-icon {
-  height: 50px;
+  height: var(--height--nav-icon);
   transition-duration: 0.25s;
 }
 
 .nav-icon:hover {
-  height: 55px;
+  height: var(--height--nav-icon-hover);
   transition-duration: 0.25s;
 }
 
@@ -570,6 +574,7 @@ em {
 
 .section-education {
   margin: 100px 0px;
+  padding: 120px 0px;
   justify-items: center;
   width: 100%;
 }
@@ -587,6 +592,87 @@ progress-ring {
 /* ===============
    ===CONTACTME===
    =============== */
+
+.section-contactme {
+  /* Flex */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  /* Size and Position */
+  margin: 100px 0px;
+  height: 75vh;
+}
+
+.section-contactme h2 {
+  margin-left: 0%;
+}
+
+.section-contactme h3 {
+  width: 40%;
+  line-height: 135%;
+  /* Text Styling */
+  text-align: center;
+  font-size: 135%;
+  font-weight: 300;
+  margin: 30px 0;
+}
+
+.contact-me-container {
+  /* Grid */
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-template-rows: repeat(2, 1fr);
+  /* Size and Position */
+  max-width: 75%;
+  max-height: 400px;
+  margin: 1%;
+  padding: 1%;
+}
+
+.contact-me-container a {
+  place-self: center;
+}
+
+.contact-me-icon .nav-icon:hover {
+  height: var(--height--nav-icon);
+}
+
+.contact-me-icon:hover + a {
+  text-decoration: underline;
+}
+
+.contact-me-link {
+  padding-left: 2%;
+  height: min-content;
+  white-space: nowrap; /*Important for LinkedIn link being one line*/
+}
+
+.contact-me-link:hover {
+  text-decoration: underline;
+}
+
+/* Alternate Layout configuration */
+/* .contact-me-container {
+  display: grid;
+  max-width: 75%;
+  min-height: 40%;
+  max-height: 400px;
+  grid-template-columns: 2fr auto 2fr;
+  grid-template-rows: repeat(2, 1fr);
+  margin: 10%;
+} */
+
+/* .contact-me-container p {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  place-self: center;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 5%;
+  line-height: 145%;
+} */
 
 /* ============
    ===FOOTER===
