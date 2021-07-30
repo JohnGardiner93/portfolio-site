@@ -605,8 +605,7 @@ progress-ring {
   justify-items: center;
   align-items: center;
   /* Size and Position */
-  margin: 100px 0px;
-  height: 75vh;
+  padding: 100px 0px;
 }
 
 .section-contactme h2 {
@@ -682,3 +681,16 @@ progress-ring {
 /* ============
    ===FOOTER===
    ============ */
+.section-footer {
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0px;
+  padding: 1% 0;
+}
+
+.section-footer p {
+  margin-right: 15px;
+  font-size: 150%;
+}
