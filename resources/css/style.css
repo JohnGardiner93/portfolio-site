@@ -330,6 +330,7 @@ em {
   width: 98%;
   margin: 0% 1%;
   top: 90%;
+  left: 0;
   z-index: 5;
   /* Style */
   background-color: rgba(0, 0, 0, 0.5);
