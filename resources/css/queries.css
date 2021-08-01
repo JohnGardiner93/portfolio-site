@@ -1,0 +1,115 @@
+/* Large Computers */
+@media only screen and (max-width: 1920px) {
+}
+
+/* Small Computers */
+@media only screen and (max-width: 1440px) {
+  /* Section - About Me */
+  .section-aboutme {
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "title title"
+      "picture description"
+      "picture skills";
+  }
+
+  .aboutme-container--skill-icons {
+    place-self: start start;
+  }
+
+  .aboutme-description {
+    place-self: center end;
+  }
+
+  .aboutme-image {
+    place-self: start end;
+  }
+}
+
+/* Tablets */
+@media only screen and (max-width: 1023px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+
+  /* Section - About Me */
+  .section-aboutme h2 {
+    width: auto;
+    margin: 10px 0;
+    font-size: 350%;
+  }
+
+  .section-aboutme {
+    height: auto;
+  }
+
+  .aboutme-container--skill-icons {
+    width: unset;
+    max-width: unset;
+  }
+
+  .aboutme-image {
+    height: 35vw;
+    margin-left: 5%;
+    place-self: start center;
+  }
+
+  .section-aboutme h2,
+  .aboutme-description {
+    place-self: center center;
+  }
+
+}
+
+/* Mobile Landscape */
+@media only screen and (max-width: 768px) {
+  /* Section - About Me */
+  .section-aboutme h2 {
+    font-size: 300%;
+  }
+
+  .section-aboutme {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto;
+    grid-template-areas:
+      "title"
+      "picture"
+      "description"
+      "skills";
+  }
+
+  .aboutme-container--skill-icons {
+    width: 95vw;
+    max-width: 500px;
+    place-self: center center;
+  }
+
+  .aboutme-image {
+    height: 75vw;
+    margin: 0;
+  }
+}
+
+/* Mobile Portrait */
+@media only screen and (max-width: 478px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+
+  /* About Me */
+
+  .skill-icon {
+    height: 75px;
+    border-radius: 5px;
+    margin: 5px;
+    transition-duration: 0.5s;
+  }
+
+  .skill-icon:hover {
+    height: 100px;
+    transition-duration: 0.5s;
+}
+}

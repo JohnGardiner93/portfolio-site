@@ -183,7 +183,7 @@ a:visited {
   grid-template-columns: 1fr auto 1fr;
   grid-template-areas:
     "title title title"
-    ". . .";
+    "skills picture description";
   align-content: center;
   justify-content: center;
   height: 75vh;
@@ -196,6 +196,7 @@ a:visited {
 
 .aboutme-container--skill-icons {
   /* Size & Position */
+  grid-area: skills;
   place-self: center end;
   height: min-content;
   max-width: 500px;
@@ -241,6 +242,7 @@ a:visited {
 }
 
 .aboutme-image {
+  grid-area: picture;
   height: 50vh;
   border-radius: 50%;
   border: 5px solid white;
@@ -249,6 +251,7 @@ a:visited {
 
 .aboutme-description {
   /* Size & Position */
+  grid-area: description;
   max-width: 500px;
   height: min-content;
   place-self: center start;
