@@ -1,5 +1,12 @@
 /* Large Computers */
 @media only screen and (max-width: 1920px) {
+  .project-photo-container {
+    height: 400px;
+  }
+
+  .project-photo-container:hover {
+    height: 450px;
+  }
 }
 
 /* Small Computers */
@@ -24,6 +31,15 @@
 
   .aboutme-image {
     place-self: start end;
+  }
+
+  /* Section - Projects */
+  .project-photo-container {
+    height: 300px;
+  }
+
+  .project-photo-container:hover {
+    height: 350px;
   }
 }
 
@@ -61,6 +77,19 @@
     place-self: center center;
   }
 
+  /* Section - Projects */
+  .section-projects {
+    grid-template-columns: 1fr minmax(25px, 200px) 1fr;
+    padding-top: 50px;
+  }
+
+  .project-photo-container {
+    height: 30vw;
+  }
+
+  .project-photo-container:hover {
+    height: 30vw;
+  }
 }
 
 /* Mobile Landscape */
@@ -78,6 +107,7 @@
       "picture"
       "description"
       "skills";
+    text-align: center;
   }
 
   .aboutme-container--skill-icons {
@@ -89,6 +119,74 @@
   .aboutme-image {
     height: 75vw;
     margin: 0;
+  }
+
+  /* Section - Projects */
+  .section-projects {
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto-fill, auto);
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  /* Re-order Elements */
+  /* nth-child - even though the selector is applied to div, the integer passed to nth child accounts for any element in the parent. */
+  .section-projects > div:nth-child(2) {
+    order: 2;
+  }
+  .section-projects > div:nth-child(4) {
+    order: 3;
+  }
+  .section-projects > div:nth-child(5) {
+    order: 5;
+  }
+  .section-projects > div:nth-child(7) {
+    order: 4;
+  }
+  .section-projects > div:nth-child(8) {
+    order: 6;
+  }
+  .section-projects > div:nth-child(10) {
+    order: 7;
+  }
+
+  .section-projects h2 {
+    grid-column: span 1;
+    order: 1;
+  }
+
+  .left-side {
+    place-self: center center;
+    margin: 0%;
+    text-align: center;
+  }
+
+  .right-side {
+    grid-column-start: 1;
+    place-self: center center;
+    margin: 0%;
+  }
+
+  .project-photo-container,
+  .project-photo-container:hover {
+    width: 95%;
+    height: auto;
+    margin: 30px 2.5% 0 2.5%;
+  }
+
+  .project-photo {
+    height: auto;
+    width: 100%;
+  }
+
+  .project-description-container {
+    margin: 5px 2.5% 75px 2.5%;
+  }
+  .project-vine {
+    transition-duration: 0s;
+    display: none;
   }
 }
 
