@@ -50,11 +50,19 @@
     font-size: 18px;
   }
 
+  h2 {
+    font-size: 250%;
+  }
+
+  section {
+    height: auto;
+  }
+
   /* Section - About Me */
   .section-aboutme h2 {
     width: auto;
     margin: 10px 0;
-    font-size: 350%;
+    /* font-size: 350%; */
   }
 
   .section-aboutme {
@@ -209,5 +217,5 @@
   .skill-icon:hover {
     height: 100px;
     transition-duration: 0.5s;
-}
+  }
 }
