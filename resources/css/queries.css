@@ -98,6 +98,23 @@
   .project-photo-container:hover {
     height: 30vw;
   }
+
+  /* Section - Education */
+  .section-education {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .section-education h2 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    width: min-content;
+  }
+
+  progress-ring {
+    margin: 20px 30px;
+  }
 }
 
 /* Mobile Landscape */
