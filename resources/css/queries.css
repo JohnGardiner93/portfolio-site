@@ -115,6 +115,20 @@
   progress-ring {
     margin: 20px 30px;
   }
+
+  /* Section - Contact Me */
+  .section-contactme {
+    padding: 35px 0px;
+  }
+
+  .section-contactme h2 {
+    width: auto;
+  }
+
+  .section-contactme h3 {
+    width: 60%;
+    margin: 10px 0px;
+  }
 }
 
 /* Mobile Landscape */
@@ -212,6 +226,18 @@
   .project-vine {
     transition-duration: 0s;
     display: none;
+  }
+
+  /* Section - Contact Me */
+  .section-contactme h3 {
+    width: 90%;
+    margin: 10px 0px;
+  }
+
+  .contact-me-container {
+    max-width: unset;
+    width: min-content;
+    padding-right: 10px;
   }
 }
 

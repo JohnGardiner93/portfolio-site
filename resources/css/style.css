@@ -613,6 +613,7 @@ progress-ring {
 
 .section-contactme h2 {
   margin-left: 0%;
+  white-space: nowrap;
 }
 
 .section-contactme h3 {
@@ -628,7 +629,7 @@ progress-ring {
 .contact-me-container {
   /* Grid */
   display: grid;
-  grid-template-columns: auto max-content;
+  grid-template-columns: min-content max-content;
   grid-template-rows: repeat(2, 1fr);
   /* Size and Position */
   max-width: 75%;
