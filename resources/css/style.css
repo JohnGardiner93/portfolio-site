@@ -152,6 +152,7 @@ nav label:after {
   height: 60px;
   width: 60px;
   background-image: url(svg/nav-menu.svg);
+  display: none;
 }
 
 .nav-links {

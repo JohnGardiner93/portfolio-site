@@ -148,6 +148,11 @@
   }
 
   /* Mobile Nav */
+
+  nav label:after {
+    display: block;
+  }
+
   .nav-icon,
   .nav-icon:hover {
     height: 40px;
