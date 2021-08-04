@@ -193,7 +193,7 @@
   }
 
   .mobile-nav:checked ~ label:after {
-    background-image: url(/resources/svg/nav-close.svg);
+    background-image: url(svg/nav-close.svg);
   }
 
   /* Section - About Me */
@@ -285,7 +285,7 @@
   }
 
   .project-description-container {
-    margin: 5px 2.5% 75px 2.5%;
+    margin: 5px 2.5% 50px 2.5%;
   }
   .project-vine {
     transition-duration: 0s;
