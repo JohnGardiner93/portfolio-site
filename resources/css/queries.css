@@ -88,7 +88,6 @@
   /* Section - Projects */
   .section-projects {
     grid-template-columns: 1fr minmax(25px, 200px) 1fr;
-    padding-top: 50px;
   }
 
   .project-photo-container {
@@ -102,7 +101,6 @@
   /* Section - Education */
   .section-education {
     margin: 0px;
-    padding: 0px;
   }
 
   .section-education h2 {
@@ -133,6 +131,71 @@
 
 /* Mobile Landscape */
 @media only screen and (max-width: 768px) {
+  /* Section - Nav */
+  nav {
+    /*Size & Position */
+    height: 60px;
+    margin-bottom: 0px;
+    padding: 2px 0px;
+    /* Grid */
+    grid-template-rows: auto;
+    grid-template-columns: 0.5fr auto 0.5fr;
+    grid-template-areas: "nav-menu name .";
+  }
+
+  nav h1 {
+    font-size: 200%;
+  }
+
+  /* Mobile Nav */
+  .nav-icon,
+  .nav-icon:hover {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    width: 50%;
+    max-width: 275px;
+  }
+
+  .nav-external-links {
+    /* 60px -> Nav height. 30vh - internal links height */
+    top: calc(max(150px, 30vh) + 60px);
+    justify-content: center;
+    min-height: 45px;
+  }
+
+  .nav-internal-links {
+    top: 60px;
+    height: 30vh;
+    min-height: 150px;
+    padding-top: 4px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .nav-internal-links a {
+    padding: 5px 0px;
+    text-align: left;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .mobile-nav:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .mobile-nav:checked ~ label:after {
+    background-image: url(/resources/svg/nav-close.svg);
+  }
+
   /* Section - About Me */
   .section-aboutme h2 {
     font-size: 300%;
@@ -168,6 +231,7 @@
     justify-content: center;
     justify-items: center;
     text-align: center;
+    padding-top: 65px;
   }
 
   /* Re-order Elements */
@@ -228,6 +292,11 @@
     display: none;
   }
 
+  /* Section - Education */
+  .section-education {
+    padding: 65px 0px 0px 0px;
+  }
+
   /* Section - Contact Me */
   .section-contactme h3 {
     width: 90%;
@@ -246,6 +315,11 @@
   html,
   body {
     font-size: 16px;
+  }
+
+  /* Nav */
+  nav h1 {
+    font-size: 175%;
   }
 
   /* About Me */

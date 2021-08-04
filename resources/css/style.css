@@ -125,6 +125,35 @@ nav h1 {
   font-weight: 300;
 }
 
+.mobile-nav {
+  /* "Checkbox Hack" */
+  position: absolute;
+  /* Styling */
+  display: none;
+}
+
+nav label {
+  cursor: pointer;
+  user-select: none;
+  grid-area: nav-menu;
+  place-self: center center;
+  width: 90%;
+  height: 100%;
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+nav label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  background-image: url(/resources/svg/nav-menu.svg);
+}
+
 .nav-links {
   display: flex;
   align-items: center;
