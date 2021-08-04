@@ -9,4 +9,4 @@ General Description: Website to display the progress on my journey to becoming a
 
 Designed to be responsive desktop, tablet, and mobile.
 
-## Features use of custom "progressRing" web component made specifically for this project.
+Features use of custom "progressRing" web component made specifically for this project.
