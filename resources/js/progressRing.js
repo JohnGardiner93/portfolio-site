@@ -86,77 +86,94 @@ class ProgressRing extends HTMLElement {
           <h3>${this._subtitle}</h3>
       </div>
       <style>
-          * {
-              transition-duration: ${TRANSITION_SPEED};
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;              
+            * {
+            transition-duration: ${TRANSITION_SPEED};
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;              
           }
-
+          
           .progress-card-container{
-              display: grid;
-              grid-template-rows: repeat(3, auto);
-              grid-template-columns: auto;
-              grid-template-areas: 
-              "circle"
-              "title"
-              "subtitle"
-              ;
+            display: grid;
+            grid-template-rows: repeat(3, auto);
+            grid-template-columns: auto;
+            grid-template-areas: 
+            "circle"
+            "title"
+            "subtitle"
+            ;
           }
-
+          
           .progress-circle-container {
-              position: relative;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              height:${radius * 2}px;
-              width:${radius * 2}px;
-              grid-area: circle;
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            height:${radius * 2}px;
+            width:${radius * 2}px;
+            grid-area: circle;
           }
-
+          
           svg{
-              position: absolute;
+            position: absolute;
           }
-
+          
           circle {
-              transition: stroke-dashoffset 0.35s;
-              transform: rotate(-90deg);
-              transform-origin: 50% 50%;
-              position: absolute;
+            -webkit-transition: stroke-dashoffset 0.35s;
+            -o-transition: stroke-dashoffset 0.35s;
+            transition: stroke-dashoffset 0.35s;
+            -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            -webkit-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            position: absolute;
           }
-
+          
           a{
-              position: absolute;
-              height: ${(radius - 2.5 * this._stroke) * 2}px;
-              width: ${(radius - 2.5 * this._stroke) * 2}px;
-              background-image: url(${this._backgroundImage});
-              background-position: center;
-              background-size: contain;
-              border-radius: 50%;
+            position: absolute;
+            height: ${(radius - 2.5 * this._stroke) * 2}px;
+            width: ${(radius - 2.5 * this._stroke) * 2}px;
+            background-image: url(${this._backgroundImage});
+            background-position: center;
+            background-size: contain;
+            border-radius: 50%;
           }
-
+          
           .progress-circle-container:hover svg{
-              transform: scale(${HOVER_SCALE} , ${HOVER_SCALE});
+            -webkit-transform: scale(${HOVER_SCALE} , ${HOVER_SCALE});
+            -ms-transform: scale(${HOVER_SCALE} , ${HOVER_SCALE});
+            transform: scale(${HOVER_SCALE} , ${HOVER_SCALE});
           }
           .progress-circle-container:hover a{
-              transform: scale(${HOVER_SCALE * 0.95},${HOVER_SCALE * 0.95});
+            -webkit-transform: scale(${HOVER_SCALE * 0.95},${HOVER_SCALE * 0.95});
+            -ms-transform: scale(${HOVER_SCALE * 0.95},${HOVER_SCALE * 0.95});
+            transform: scale(${HOVER_SCALE * 0.95},${HOVER_SCALE * 0.95});
           }
-
+          
           h2, h3{
-              max-width: ${radius * 2}px;
-              text-align: center;
-              place-self: center;
+            max-width: ${radius * 2}px;
+            text-align: center;
+            place-self: center;
           }
-
+          
           h2 {
-              grid-area: title;
-              font-size: 200%;
-
+            grid-area: title;
+            font-size: 200%;
+          
           }
           h3 {
-              grid-area: subtitle;
-              font-style: italic;
-              font-weight: 400;
+            grid-area: subtitle;
+            font-style: italic;
+            font-weight: 400;
           }
       </style>
     `;
