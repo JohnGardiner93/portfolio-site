@@ -27,4 +27,5 @@ This site features a custom web component in the Education section. The "Progres
 
 ![About Me](https://user-images.githubusercontent.com/7349117/129703756-97606ca5-a8a7-473e-b98f-44c81bf84285.png)
 ![Projects](https://user-images.githubusercontent.com/7349117/129703760-19e2d414-35e2-4dc1-985b-7a43308a3b1c.png)
-![Web Component Video](https://user-images.githubusercontent.com/7349117/129703802-2480180d-ef2a-47f5-b292-9686e989a10b.mp4)
+
+https://user-images.githubusercontent.com/7349117/129705301-c7326205-b902-439c-8b9e-79113c26d3e6.mp4
